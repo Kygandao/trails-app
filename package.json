@@ -1,0 +1,30 @@
+{
+  "name": "trails-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bleufox/trails-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bleufox/trails-app/issues"
+  },
+  "homepage": "https://github.com/bleufox/trails-app#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "mysql2": "^2.3.0",
+    "path": "^0.12.7",
+    "sequelize": "^6.6.5"
+  }
+}
