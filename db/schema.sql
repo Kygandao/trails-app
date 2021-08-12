@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS trails_db;
+
+CRATE DATABASE trails_db;
