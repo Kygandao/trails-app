@@ -20,6 +20,7 @@
   "homepage": "https://github.com/bleufox/trails-app#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bulma": "^0.9.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
