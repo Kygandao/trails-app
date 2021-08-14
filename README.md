@@ -13,7 +13,7 @@ the most useful trail information, we aim to be the first resource for their nex
 - Allow users the option to view the history of their previously used trails
 
 ## Technologies Used
-HTML, Javascript, CSS (Bootstrap), SQL
+HTML, Javascript, CSS (Bootstrap), SQL, Sequelize
 
 ## Screenshots
 
@@ -24,7 +24,7 @@ HTML, Javascript, CSS (Bootstrap), SQL
 ## License
 
 ## Created By
-* Kygan Dao
+* Kygan Dao, kygandao23@gmail.com
 * Cedar Haloversen
 * Jose Salas Hernandez
 * Karen Marting
