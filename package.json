@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,15 @@
   "homepage": "https://github.com/bleufox/trails-app#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "bulma": "^0.9.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "mysql2": "^2.3.0",
     "path": "^0.12.7",
     "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "node-sass": "^6.0.1"
   }
 }
