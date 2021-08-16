@@ -28,5 +28,9 @@
     "mysql2": "^2.3.0",
     "path": "^0.12.7",
     "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "node-sass": "^6.0.1"
   }
 }
