@@ -21,18 +21,12 @@
   },
   "homepage": "https://github.com/bleufox/trails-app#readme",
   "dependencies": {
-    "@popperjs/core": "^2.9.3",
     "bcrypt": "^5.0.1",
-    "bootstrap": "^5.1.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "mysql2": "^2.3.0",
     "path": "^0.12.7",
     "sequelize": "^6.6.5"
-  },
-  "devDependencies": {
-    "bulma": "^0.9.3",
-    "node-sass": "^6.0.1"
   }
 }
