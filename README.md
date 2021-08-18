@@ -18,8 +18,8 @@ HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
 ## Screenshots
 
 ## Links
-* Deployed Site:
-* GitHub Repo: 
+* Deployed Site: https://bleufox.github.io/trails-app/
+* GitHub Repo: https://bleufox.github.io/trails-app/
 
 ## License
 
