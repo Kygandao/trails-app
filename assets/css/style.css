@@ -64,6 +64,11 @@ h1, h2, h3, h4, h5, h6 {
   height:35px;
 }
 
+.map {
+  border: #111 solid 1px;
+  border-radius: 10px;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -438,17 +443,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .icon-boxes {
-  margin-top: 100px;
+  margin-top: 100px;  
 }
 
 #hero .icon-box {
-  padding: 30px 30px;
+  padding: 15px 40px;
   position: relative;
   overflow: hidden;
   background: #F0E3D7;
   transition: all 0.2s ease-in-out;
   border-radius: 5px;
   z-index: 1;
+  border: 1px solid #333333;
 }
 
 #hero .icon-box .title {
@@ -458,7 +464,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .icon-box .title a {
-  color: #333333;
+  color: #47798C;
   transition: 0.3s;
 }
 
@@ -483,7 +489,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .icon-box:hover .title a {
-  color: #47798C;
+  color: #333333;
 }
 
 @media (min-width: 1024px) {
@@ -521,7 +527,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f8fbfe;
+  background-color: #E0BBA4;
 }
 
 .section-title {
@@ -584,7 +590,7 @@ section {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
-  display: inline-block;
+  display: block;
   padding: 12px 32px;
   border-radius: 5px;
   transition: 0.3s;
@@ -840,7 +846,7 @@ section {
   font-style: italic;
   margin: 0 15px 15px 15px;
   padding: 20px;
-  background: #f3f9fd;
+  background: #E0BBA4;
   position: relative;
   margin-bottom: 35px;
   border-radius: 6px;
@@ -1341,113 +1347,6 @@ section {
 
 .team .member:hover .social {
   opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing .box {
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  background: #fefefe;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
-}
-
-.pricing .box h3 {
-  font-weight: 400;
-  padding: 15px;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #124265;
-}
-
-.pricing .box h4 {
-  font-size: 42px;
-  color: #47798C;
-  font-weight: 500;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 20px;
-}
-
-.pricing .box h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing .box h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing .box ul {
-  padding: 0;
-  list-style: none;
-  color: #124265;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing .box ul li {
-  padding-bottom: 16px;
-}
-
-.pricing .box ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .box .btn-wrap {
-  padding: 15px;
-  text-align: center;
-}
-
-.pricing .box .btn-buy {
-  display: inline-block;
-  padding: 10px 40px;
-  border-radius: 4px;
-  color: #47798C;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-  border: 2px solid #47798C;
-}
-
-.pricing .box .btn-buy:hover {
-  background: #47798C;
-  color: #F0E3D7;
-}
-
-.pricing .featured {
-  background: #47798C;
-}
-
-.pricing .featured h3, .pricing .featured h4, .pricing .featured h4 span, .pricing .featured ul, .pricing .featured ul .na {
-  color: #F0E3D7;
-}
-
-.pricing .featured .btn-wrap {
-  padding: 15px;
-  text-align: center;
-}
-
-.pricing .featured .btn-buy {
-  color: #F0E3D7;
-  border: 2px solid #F0E3D7;
-}
-
-.pricing .featured .btn-buy:hover {
-  background: #F0E3D7;
-  color: #47798C;
 }
 
 /*--------------------------------------------------------------
