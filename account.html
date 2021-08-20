@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="contact-page" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bleu Fox -- Contact</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-logos">
+            <img src="images/BleuFoxLogo.png" alt="Logo1" /><br>
+            <img src="images/FullStack.png" alt="Logo2" /><br>
+            <img src="images/AshleyJones.png" alt="Logo3">
+        </div>
+    </header>
+
+    <nav class="contactNav">
+        <a href="https://bleufox.github.io/BleuFoxPortfolio/">
+            <img class='nav-icons' src="images/home-word.png" alt="Home Word"></a>
+        <a href="https://bleufox.github.io/BleuFoxPortfolio/bio">
+            <img class='nav-icons' src="images/bio-word.png" alt="Bio Word"></a>
+        <a href="https://github.com/bleufox">
+            <img class='nav-icons' src="images/github-word.png" alt="GitHub Word"></a>
+        <a href="https://www.linkedin.com/in/bleufox/">
+            <img class='nav-icons' src="images/linkedin-word.png" alt="LinkedIn Word"></a>
+        <a href="/Resume.pdf" download>
+            <img class='nav-icons' src="images/resume-word.png" alt="Resume Word"></a>
+        <a href="https://bleufox.github.io/BleuFoxPortfolio/contact">
+            <img class='nav-icons' src="images/contact-word.png" alt="Contact Word"></a>
+    </nav>
+
+    <section class="responsiveGrid">
+        <div class="contact-info">
+            <h2><a href="mailto:thebleufox8@gmail.com">thebleufox8@gmail.com</a><br>541-505-5287</h2>
+        </div>
+    </section>
+
+    <div class="container">
+        <form action="#">
+            <label for="fname"></label>
+            <input type="text" name="firstname" placeholder="First Name">
+
+            <label for="lname"></label>
+            <input type="text" name="lastname" placeholder="Last Name">
+
+            <select id="project" name="project">
+                <option value="empty-option">What would you like to work on?</option>
+                <option value="newsite">Brand New Website</option>
+                <option value="existingBF">Edits/Updates to an Existing Website Created by Bleu Fox</option>
+                <option value="existing3rd">Edits/Updates to an Existing Website (Not Created by Bleu Fox)</option>
+                <option value="print">Print Media</option>
+                <option value="social">Social Media Branding/Posts</option>
+            </select>
+
+            <label for="subject"></label>
+            <textarea id="subject" name="subject"
+                placeholder="Tell me about your creative needs and together we will bring them to life!"
+                style="height:200px"></textarea>
+
+            <button type="submit" value="Submit">Send</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

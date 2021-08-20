@@ -2,7 +2,7 @@
   "name": "trails-app",
   "version": "1.0.0",
   "description": "## Description Trails or Fails aims to be the best trail app for the user, by the user. By providing our users with the most useful trail information, we aim to be the first resource for their next adventure.",
-  "main": "css/bulma.min.css",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,7 @@
     "mysql2": "^2.3.0",
     "node-sass-tilde-importer": "^1.0.2",
     "path": "^0.12.7",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "startbootstrap-landing-page": "^6.0.3"
   }
 }
