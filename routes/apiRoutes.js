@@ -1,6 +1,6 @@
 const express = require('express');
-const User = require('../db/models/User');
-const StarRatings = require('../db/models/StarRatings')
+const User = require('../models/User');
+//const StarRatings = require('../db/models/StarRatings')
 
 const router = express.Router();
 

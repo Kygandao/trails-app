@@ -13,7 +13,12 @@ User.init(
     username: DataTypes.STRING,
     password: DataTypes.STRING,
   },
-  { sequelize, modelName: 'user' }
+  { 
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    modelName: 'user' 
+  },
 );
 
 User.addHook('beforeCreate', async (user) => {
