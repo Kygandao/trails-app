@@ -13,13 +13,13 @@ the most useful trail information, we aim to be the first resource for their nex
 - Allow users the option to view the history of their previously used trails
 
 ## Technologies Used
-HTML, Javascript, CSS (Bootstrap), SQL, Sequelize
+HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
 
 ## Screenshots
 
 ## Links
-* Deployed Site:
-* GitHub Repo: 
+* Deployed Site: https://bleufox.github.io/trails-app/
+* GitHub Repo: https://bleufox.github.io/trails-app/
 
 ## License
 
