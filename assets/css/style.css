@@ -79,6 +79,25 @@ p{
   border-radius: 10px;
 }
 
+.btnSubmit {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 14px 50px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #333333;
+  border: 1px solid #333333;
+}
+
+.btnSubmit:hover {
+  background: #D2AC89;
+}
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -904,10 +923,13 @@ section {
   padding: 60px 0;
 }
 
-.cta h3 {
+.cta h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
   color: #F0E3D7;
-  font-size: 28px;
-  font-weight: 700;
 }
 
 .cta p {
@@ -1516,8 +1538,9 @@ section {
 --------------------------------------------------------------*/
 #footer {
   color: #444444;
+  background-color: #47798C;
   font-size: 14px;
-  background: #f8fbfe;
+  background: #F0E3D7;
   box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
 }
 
@@ -1643,6 +1666,7 @@ section {
 
 #footer .credits {
   padding-top: 5px;
+  padding-bottom: 25px;
   font-size: 13px;
   color: #444444;
 }
