@@ -1,40 +1,77 @@
 //submit button
-// const apiKey = '9c53f48bb7mshe71996a9d24cb5ap150945jsna9bb19aed148';
 const searchBtn = document.getElementById('searchBtn');
+const citySearch = document.getElementById('citySearch')
+const cityName = citySearch.value
+    console.log(cityName)
 
+//get trails by location
+    function getTrail(lat, lon) {
+        
+    const requestUrl = `https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=${lat}&lon=${lon}`
 
-const trailName = document.getElementById('trailName');
-const mainEl = document.getElementById('main')
+    //api call
+    fetch(requestUrl), {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
+		"x-rapidapi-key": "9c53f48bb7mshe71996a9d24cb5ap150945jsna9bb19aed148"
+	}}   
+.then(response => {
+	console.log(response);
+    return response.json();
+})
+.catch(err => {
+	console.error(err);
+})
 
-const setTrailImage = (imgEl) => {
+.then((data) => { 
+    const lat = data.lat
+    const lon = data.lon
+    // populateTrailResults(data);
+    // function populateTrailResults (data) {
+        data.trails.forEach ((trail) => {
+            const trailEl = document.createElement('h1');
+            trailEl.textContent = `${trail.name}`
+            document.getElementById('trailList').appendChild(trailEl);
+            const trailId = document.createElement('li');
+            trailId.textContent = `${trail.id}`
+            document.getElementById('trailList').appendChild(trailId);
+            const trailLength = document.createElement('li');
+            trailLength.textContent = `${trail.length}`
+            document.getElementById('trailList').appendChild(trailLength);
+            const trailDescription = document.createElement('li');
+            trailDescription.textContent = `${trail.description}`
+            document.getElementById('trailList').appendChild(trailDescription);
+            const trailCity = document.createElement('li');
+            trailCity.textContent = `${trail.city}`
+            document.getElementById('trailList').appendChild(trailCity);        
 
-}
+        })
+    }
+// }
+)
 
-// function getTrail(event) {
-//     event.preventDefault();
-    // const citySearch = document.getElementById('citySearch').value;
-    $.get({
-        url: 'https://trailapi-trailapi.p.rapidapi.com/trails/map/12/gpx/',
-        headers: {
-            'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com',
-            'x-rapidapi-key': '9c53f48bb7mshe71996a9d24cb5ap150945jsna9bb19aed148'
-        }
-
-    }).then(function(showTrail) {
-        console.log (showTrail)
-    })
-//         const trailContainer = document.getElementById ('trailContainer')
-//         trailContainer.innerHTML = '';
-//         for (let i = 0; i < showTrail.length; i++)
-
-
-// searchBtn.click(function (event) {
-//     event.preventDefault()
-//     getTrail(event)
+// function getGeoCoordinates() {
+//     const cityName = citySearch.value
+//     console.log(cityName)
+// }
+// fetch(requestUrl)
+// .then(function(geoResponse) {
+//     return geoResponse.json();
 // })
-// console.log(getTrail)
+
+// .then (trailData => {
+//     if (trailData.length > 0) {
+//         getTrail(trailData[1].lat, trailData[1].lon)
+//     }
 // })
 // }
+
+searchBtn.click(function (event) {
+    event.preventDefault()
+    getTrail(event)
+})
+
 
 //get stars from class
 const clickedStar = document.querySelector('.stars')
@@ -56,34 +93,40 @@ stars.forEach((star, starIndex) => {
 }) 
 
 
+// var axios = require("axios").default;
+// mapboxgl.accessToken = 'pk.eyJ1IjoiY2VkYXJoYWx2b3Jzb24iLCJhIjoiY2tzZHY1anlsMHVkcTJ0bzI0NzU1Z2FmMCJ9.5523rDcsb_V3eRU7jnW_rw';
+
+// navigator.geolocation.getCurrentPosition(successLocation, errorLocation, { enableHighAccuracy: true 
+// });
 
 
 
-
-
-
-
-
-
-
-// //function to get geocode
-// function geoLocationCode(event){
-//     event.preventDefault();
-//     var location = document.getElementById('locationInput').value;   //gets the value from input field
-//     $.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyD5z7ZEbyLXIBHSPMaAIwoCr1CGsCjO1g8`)
-//     .then(function(response){
-//         console.log(response);
-       
-//             var results = response.results;
-//             return results[0].geometry.location;
-        
-     
-//     })
-//     .then(trailInfo)  
-    
-//     .catch(function(error){
-//         window.alert("Please enter the zipcode or the city for your search!");
-//     })
-
+// function successLong(position) {
+//     console.log(position)
+//     setupMap([position.coords.longitude])
 // }
+
+
+// function successLatatude(position) {
+//     console.log(position)
+//     setupMap([position.coords.latitude])
 // }
+
+
+// function setupMap(center) {
+//     var options = {
+//         method: 'GET',
+//         url: 'https://trailapi-trailapi.p.rapidapi.com/trails/explore/',
+//         params: {lon: ${}, lat: position.coords.latitude },
+//         headers: {
+//           'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com',
+//           'x-rapidapi-key': '9c53f48bb7mshe71996a9d24cb5ap150945jsna9bb19aed148'
+//         }
+//       };
+
+
+
+
+
+    }
+
