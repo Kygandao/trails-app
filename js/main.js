@@ -1,24 +1,3 @@
-/**
- * Dropdown menu
- */
-document.addEventListener('DOMContentLoaded', function() {
-    const menus = document.querySelectorAll('.navbar-burger');
-    const dropdowns = document.querySelectorAll('.navbar-menu');
-
-    if (menus.length && dropdowns.length) {
-        for (var i = 0; i < menus.length; i++) {
-            menus[i].addEventListener('click', function() {
-                for (var j = 0; j < dropdowns.length; j++) {
-                    dropdowns[j].classList.toggle('is-active');
-                }
-            });
-        }
-    }
-});
-
-(function() {
-    "use strict";
-  
     /**
      * Easy selector helper function
      */
@@ -51,27 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const onscroll = (el, listener) => {
       el.addEventListener('scroll', listener)
     }
-  
-    /**
-     * Navbar links active state on scroll
-     */
-    let navbarlinks = select('#navbar .scrollto', true)
-    const navbarlinksActive = () => {
-      let position = window.scrollY + 200
-      navbarlinks.forEach(navbarlink => {
-        if (!navbarlink.hash) return
-        let section = select(navbarlink.hash)
-        if (!section) return
-        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-          navbarlink.classList.add('active')
-        } else {
-          navbarlink.classList.remove('active')
-        }
-      })
-    }
-    window.addEventListener('load', navbarlinksActive)
-    onscroll(document, navbarlinksActive)
-  
+   
     /**
      * Scrolls to an element with header offset
      */
@@ -119,25 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     /**
-     * Mobile nav toggle
-     */
-    on('click', '.mobile-nav-toggle', function(e) {
-      select('#navbar').classList.toggle('navbar-mobile')
-      this.classList.toggle('bi-list')
-      this.classList.toggle('bi-x')
-    })
-  
-    /**
-     * Mobile nav dropdowns activate
-     */
-    on('click', '.navbar .dropdown > a', function(e) {
-      if (select('#navbar').classList.contains('navbar-mobile')) {
-        e.preventDefault()
-        this.nextElementSibling.classList.toggle('dropdown-active')
-      }
-    }, true)
-  
-    /**
      * Scroll with ofset on links with a class name .scrollto
      */
     on('click', '.scrollto', function(e) {
@@ -182,37 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const glightbox = GLightbox({
       selector: '.glightbox'
     });
-  
-    /**
-     * Testimonials slider
-     */
-    new Swiper('.testimonials-slider', {
-      speed: 600,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-  
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        }
-      }
-    });
-  
-    
+      
     //  Animation on scroll
     window.addEventListener('load', () => {
       AOS.init({
@@ -222,5 +132,3 @@ document.addEventListener('DOMContentLoaded', function() {
         mirror: false
       })
     });
-  
-  })()
