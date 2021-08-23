@@ -69,28 +69,33 @@
         <div class="text-center">
           <div class="container register-form">
             <div class="form">
-              <div class="note">
-                <h2>Sign Up</h2>
-              </div>
-              <p>Register your account to have access to your favorite trails, personal records, and more.</p>
-              <div class="form-content">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="First Name" value="" />
+                <div class="note">
+                    <h2>Sign Up</h2>
+                </div>
+                <p>Register your account to have access to your favorite trails, personal records, and more.</p>
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" 
+                                id="first-name" 
+                                class="form-control" placeholder="First Name" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" 
+                                id="username" class="form-control" placeholder="Username" value=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="password" class="form-control" placeholder="Your Password" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Confirm Password" value=""/>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Username" value="" />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Your Password" value="" />
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Confirm Password" value="" />
-                    </div>
-                  </div>
+                    <button type="button" id="register-btn" class="btn btn-outline-light">Register</button>
                 </div>
                 <button type="button" class="btn btn-outline-light">Register</button>
               </div>
@@ -265,6 +270,7 @@
 
   <!-- Template Main JS File -->
   <script src="/public/js/main.js"></script>
+  <script src="./js/signUp.js"></script>
 
   <!-- Bootstrap -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
