@@ -6,11 +6,10 @@ the most useful trail information, we aim to be the first resource for their nex
 
 ## MVPs
 
-- Allow users to create an account with a username and password
-- Encrypt passwords to protect the user
-- User login session will terminate after a given amount of time requiring user to login again when they return
-- Account creation allows user to select and save a trail to their wishlist/favorites
-- Allow users the option to view the history of their previously used trails
+- Account Creation - Create an account username and password, encrypt password
+- Trail Search/Trail Details - Use API for trail search and details
+- Favorites Trails List - Use database to retrieve favorited trails
+- Reviews - Use pull request to retrieve reviews
 
 ## Technologies Used
 HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
@@ -26,6 +25,5 @@ HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
 ## Created By
 * Kygan Dao, kygandao23@gmail.com
 * Cedar Haloversen
-* Jose Salas Hernandez
 * Karen Marting
 * Ashley Jones, thebleufox8@gmail.com, 541.505.5287
