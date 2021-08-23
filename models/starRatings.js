@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../../config/connection');
 
 class StarRatings extends Model { }
 StarRatings.init(
@@ -8,10 +8,7 @@ StarRatings.init(
       trailId: DataTypes.STRING,
       rating: DataTypes.DECIMAL
     },
-    { 
-      sequelize,
-      modelName: 'starratings'
-    },
+    { sequelize, modelName: 'starratings' }
   );
 
   module.exports = StarRatings;
