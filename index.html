@@ -7,11 +7,11 @@
     <title>Trails or Fails -- Trail Finder</title>
 
     <!-- Mapbox -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="public/images/mountains-icon.png" />
@@ -155,7 +155,7 @@
                                 <img src="public/images/backpack.png" alt="" style="width: 75px">
                             </div>
                             <h4><a href="">Multnomah Falls</a></h4>
-                            <p>Exceptional trails leading to panoramic views at Pittock Mansion. </p>
+                            <p>It's worth coming up, beautiful views. Easy drive from town.</p>
                             <div class="stars">
                                 <a>⭐</a>
                                 <a>⭐</a>
@@ -173,7 +173,7 @@
                                 <img src="public/images/boots.png" alt="" style="width: 75px">
                             </div>
                             <h4><a href="">Spring Brook Park</a></h4>
-                            <p>Exceptional trails leading to panoramic views at Pittock Mansion. </p>
+                            <p>Clear trails, paths for the beginners and avid hikers.</p>
                             <div class="stars">
                                 <a>⭐</a>
                                 <a>⭐</a>
@@ -191,7 +191,7 @@
                                 <img src="public/images/bike-icon.png" alt="" style="width: 75px">
                             </div>
                             <h4><a href="">Crosscreek Trails</a></h4>
-                            <p>Exceptional trails leading to panoramic views at Pittock Mansion. </p>
+                            <p>Awesome bike trails, lots of inclines and jumps.</p>
                             <div class="stars">
                                 <a>⭐</a>
                                 <a>⭐</a>
@@ -208,7 +208,7 @@
                                 <img src="public/images/jogging.png" alt="" style="width: 75px">
                             </div>
                             <h4><a href="">Powell Butte Nature Park</a></h4>
-                            <p>Exceptional trails leading to panoramic views at Pittock Mansion. </p>
+                            <p>Can't wait to go again with the family. Beautiful, peaceful.</p>
                             <div class="stars">
                                 <a>⭐</a>
                                 <a>⭐</a>
@@ -226,7 +226,7 @@
                                 <img src="public/images/mountains-icon.png" alt="" style="width: 75px">
                             </div>
                             <h4><a href="">Springwater Corridor Trail</a></h4>
-                            <p>Exceptional trails leading to panoramic views at Pittock Mansion. </p>
+                            <p>Absolutely beautiful park! I could have walked around there all day!</p>
                             <div class="stars">
                                 <a>⭐</a>
                                 <a>⭐</a>
@@ -286,6 +286,43 @@
     <!-- Star Ratings -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script>
+
+// MAPBOX
+            mapboxgl.accessToken = 'pk.eyJ1IjoiY2VkYXJoYWx2b3Jzb24iLCJhIjoiY2tzZHY1anlsMHVkcTJ0bzI0NzU1Z2FmMCJ9.5523rDcsb_V3eRU7jnW_rw';
+            
+            navigator.geolocation.getCurrentPosition(successLocation, errorLocation, { enableHighAccuracy: true 
+            });
+            
+            function successLocation(position) {
+                console.log(position)
+                setupMap([position.coords.longitude, position.coords.latitude])
+            }
+            
+            function errorLocation() {
+            setupMap([0.00, 0.00])
+            }
+            
+            function setupMap(center) {
+                let map = new mapboxgl.Map({
+                    container: "map",
+                    style: "mapbox://styles/mapbox/streets-v11",
+                    center: center,
+                    zoom: 12
+                })
+                map.addControl(new mapboxgl.NavigationControl());
+                
+                var directions = new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                })
+                map.addControl(directions, 'top-left');
+            }
+            
+            
+            
+            
+            </script>
 </body>
 
 </html>
