@@ -14,7 +14,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="./images/mountains-icon.png" />
+  <link rel="icon" type="image/x-icon" href="/public/images/mountains-icon.png" />
 
   <!-- Google Fonts -->
   <link
@@ -22,14 +22,17 @@
     rel="stylesheet">
 
   <!-- CSS Files -->
-  <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="./assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/public/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/public/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/public/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="/public/assets/css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 </head>
 
@@ -42,12 +45,14 @@
         <meta width=device-width, initial-scale=1.0>
         <div class="col-xl-7 col-lg-9 text-center">
           <img src="/public/images/trails-or-fails-main.png" alt="trails-or-fails" style="width: 100%;">
-          <img src="/public/images/adventure.png" alt="trails-or-fails" style="width: 75%; padding-top: 20px; padding-bottom: 25px;">
+          <img src="/public/images/adventure.png" alt="trails-or-fails"
+            style="width: 75%; padding-top: 20px; padding-bottom: 25px;">
         </div>
         <!-- Search form -->
-<div class="md-form mt-0">
-  <input class="form-control" type="text" placeholder="Search by city to find the trails closest to you" aria-label="Search">
-</div>
+        <div class="md-form mt-0">
+          <input class="form-control" type="text" placeholder="Search by city to find the trails closest to you"
+            aria-label="Search">
+        </div>
       </div>
       <!-- <div class="text-center">
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
@@ -57,12 +62,12 @@
 
 
   <main id="main">
-    
+
     <!-- ======= ACCOUNT CREATION ======= -->
-        <section id="cta" class="cta">
-          <div class="container" data-aos="zoom-in">
-            <div class="text-center">
-              <div class="container register-form">
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+        <div class="text-center">
+          <div class="container register-form">
             <div class="form">
                 <div class="note">
                     <h2>Sign Up</h2>
@@ -72,54 +77,54 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name" value=""/>
+                                <input type="text" 
+                                id="first-name" 
+                                class="form-control" placeholder="First Name" value=""/>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Username" value=""/>
+                                <input type="text" 
+                                id="username" class="form-control" placeholder="Username" value=""/>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Password" value=""/>
+                                <input type="text" id="password" class="form-control" placeholder="Your Password" value=""/>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Confirm Password" value=""/>
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-outline-light">Register</button>
+                    <button type="button" id="register-btn" class="btn btn-outline-light">Register</button>
                 </div>
-            </div>
-        </div>
+                <button type="button" class="btn btn-outline-light">Register</button>
+              </div>
             </div>
           </div>
-        </section>
-  <!--End of Account Creation -->
+        </div>
+      </div>
+    </section>
+    <!--End of Account Creation -->
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-    
     <!-- ======= Trails on Demand Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Trails on Demand</h2>
-          <p>No matter where you are, we've got you covered. This map will keep you informed of the trails closest to you in real time.</p>
+          <p>No matter where you are, we've got you covered. This map will keep you informed of the trails closest to
+            you in real time.</p>
         </div>
         <div class="map-border" data-aos="fade-right" data-aos-delay="100">
           <div class="map" id='map' style='width: auto; height: 400px;'></div>
           <script>
-          mapboxgl.accessToken = 'pk.eyJ1IjoiY2VkYXJoYWx2b3Jzb24iLCJhIjoiY2tzZHY1anlsMHVkcTJ0bzI0NzU1Z2FmMCJ9.5523rDcsb_V3eRU7jnW_rw';
-          var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/streets-v11'
-          });
+            mapboxgl.accessToken = 'pk.eyJ1IjoiY2VkYXJoYWx2b3Jzb24iLCJhIjoiY2tzZHY1anlsMHVkcTJ0bzI0NzU1Z2FmMCJ9.5523rDcsb_V3eRU7jnW_rw';
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v11'
+            });
           </script>
-      </div>
+        </div>
       </div>
     </section><!-- End About Section -->
 
@@ -236,33 +241,40 @@
   <footer id="footer">
 
     <div class="container text-center">
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-              href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      </div>
   </footer>
   <!-- End Footer -->
 
+
+  <!-- Back to Top Arrow -->
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="./assets/vendor/aos/aos.js"></script>
-  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="./assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="./assets/vendor/php-email-form/validate.js"></script>
-  <script src="./assets/vendor/purecounter/purecounter.js"></script>
-  <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/public/assets/vendor/aos/aos.js"></script>
+  <script src="/public//assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public//assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/public//assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/public//assets/vendor/php-email-form/validate.js"></script>
+  <script src="/public//assets/vendor/purecounter/purecounter.js"></script>
+  <script src="/public//assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="./js/main.js"></script>
+  <script src="/public/js/main.js"></script>
+  <script src="./js/signUp.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
 
