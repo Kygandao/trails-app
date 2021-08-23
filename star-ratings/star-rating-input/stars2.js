@@ -19,6 +19,22 @@ stars.forEach((star, starIndex) => {
     })
 }) 
 
+// -------------- Fetches the API data based on user's query search --------------
+
+function getAPI(trailSearch) {
+    fetch(`'https://trailapi-trailapi.p.rapidapi.com/trails/map/12/gpx/'
+    
+    
+    https://www.googleapis.com/books/v1/volumes?q=${trailSearch}`)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            handleData(data);
+        });
+};
+
+// -------------- Event listener input's user's query into the API fetch function --------------
 
 // // var axios = require("axios").default;
 // // mapboxgl.accessToken = 'pk.eyJ1IjoiY2VkYXJoYWx2b3Jzb24iLCJhIjoiY2tzZHY1anlsMHVkcTJ0bzI0NzU1Z2FmMCJ9.5523rDcsb_V3eRU7jnW_rw';
@@ -33,6 +49,13 @@ stars.forEach((star, starIndex) => {
 // //     setupMap([position.coords.longitude])
 // // }
 
+submitBtn.addEventListener('click', handleClick);
+
+
+function handleClick() {
+    const userQuery = searchInputEl.value;
+    getAPI(userQuery);
+};
 
 // // function successLatatude(position) {
 // //     console.log(position)
