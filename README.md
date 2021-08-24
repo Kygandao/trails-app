@@ -15,7 +15,10 @@ the most useful trail information, we aim to be the first resource for their nex
 HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
 
 ## Screenshots
+![alt text](public/images/header-screenshot.png)
+![alt text](public/images/map-screenshot.png)
 ![alt text](public/images/terminal.png)
+
 
 ## Links
 * Deployed Site: https://bleufox.github.io/trails-app/
