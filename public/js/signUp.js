@@ -10,6 +10,7 @@ async function signUpForm(event) {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
+            //TODO: Take user to dashboard page
             console.log('success');
         } else {
             alert(response.statusText);
