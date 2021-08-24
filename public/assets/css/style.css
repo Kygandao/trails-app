@@ -36,10 +36,6 @@ p{
   font-size: 11pt;
 }
 
-button {
-  width: 150px;
-}
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -101,23 +97,6 @@ button {
   background: #D2AC89;
 }
 
-.form {
-  width:100%;
-  padding: 5px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box; 
-  border-radius: 10px;
-}
-
-.form-button{
-  width:75%;
-  padding: 5px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box; 
-  border-radius: 10px;
-}
 
 /*--------------------------------------------------------------
 # Star Ratings
