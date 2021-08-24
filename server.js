@@ -94,36 +94,3 @@ stars.forEach((star, starIndex) => {
 
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-// //function to get geocode
-// function geoLocationCode(event){
-//     event.preventDefault();
-//     var location = document.getElementById('locationInput').value;   //gets the value from input field
-//     $.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyD5z7ZEbyLXIBHSPMaAIwoCr1CGsCjO1g8`)
-//     .then(function(response){
-//         console.log(response);
-
-//             var results = response.results;
-//             return results[0].geometry.location;
-
-
-//     })
-//     .then(trailInfo)  
-
-//     .catch(function(error){
-//         window.alert("Please enter the zipcode or the city for your search!");
-//     })
-
-// }
-// }
