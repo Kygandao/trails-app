@@ -1,6 +1,7 @@
 const express = require('express');
 const router = require('./routes');
 const sequelize = require('./config/connection');
+const { Sequelize } = require('sequelize/types');
 
 const PORT = 3000;
 const app = express();
@@ -8,6 +9,24 @@ const app = express();
 app.use(express.json());
 app.use(router);
 app.use(express.static('public'));
+
+//SET UP SESSION AND CONNECT TO SEQUELIZE DB
+const sess = {
+    secret: 'Mega Ultra Secret',
+    cookie: {
+        maxAge: 4800,
+        httpOnly: true,
+        secure: false,
+        sameSite: 'strict',
+    },
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize,
+    }),
+};
+
+app.use(session(sess));
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:3000'));
