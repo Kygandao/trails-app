@@ -21,6 +21,16 @@ router.get('/users/sign-in/:username', async (req, res) => {
   res.json(validated);
 });
 
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    })
+  } else {
+    res.status(404).end();
+  }
+});
+
 router.post('/rating', (req, res) => {
   //will need to pass in the user id, trail id and the rating
   StarRatings.create({
