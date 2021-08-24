@@ -12,7 +12,7 @@ the most useful trail information, we aim to be the first resource for their nex
 - Reviews - Use pull request to retrieve reviews
 
 ## Technologies Used
-HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
+HTML, Javascript, CSS, SQL, Sequelize, Bootstrap
 
 ## Screenshots
 ![alt text](public/images/header-screenshot.png)
