@@ -25,6 +25,7 @@ HTML, Javascript, CSS, SQL, Sequelize, Bulma, Bootstrap
 * GitHub Repo: https://bleufox.github.io/trails-app/
 
 ## License
+MIT
 
 ## Created By
 * Kygan Dao, kygandao23@gmail.com
