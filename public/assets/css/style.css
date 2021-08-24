@@ -382,7 +382,7 @@ section {
 }
 
 .section-bg {
-  background-color: #F0E3D7;
+  background-color: #47798C;
 }
 
 .section-title {
@@ -396,7 +396,16 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #124265;
+  color: #F0E3D7;
+}
+
+.section-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #47798C;
 }
 
 .section-title p {
@@ -471,7 +480,7 @@ section {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: #D2AC89;
+  background: #F0E3D7;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
 }
 
@@ -647,7 +656,6 @@ section {
   color: #444444;
   background-color: #47798C;
   font-size: 14px;
-  background: #F0E3D7;
   box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
 }
 
